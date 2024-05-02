@@ -19,6 +19,7 @@ export default [
     rules: {
       semi: 'error',
       'prefer-const': 'error',
+      'max-len': ['error', { ignoreComments: true }],
       'react/jsx-indent': [2, 2],
       indent: [2, 2],
       'object-curly-spacing': ['error', 'always'],
