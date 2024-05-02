@@ -2,7 +2,8 @@ import pluginJs from '@eslint/js';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import pluginReactConfig from 'eslint-plugin-react/configs/recommended.js';
 import globals from 'globals';
-import tseslint from 'typescript-eslint';
+import tseslint, { plugin } from 'typescript-eslint';
+import i18next from 'eslint-plugin-i18next';
 
 export default [
   {
@@ -27,6 +28,17 @@ export default [
       'react/react-in-jsx-scope': 'off',
       // 'no-unused-vars': ['warn'],
       '@typescript-eslint/no-unused-vars': ['warn'],
+      'object-curly-newline': [
+        'error',
+        {
+          ExportDeclaration: 'always',
+        },
+      ],
+      'i18next/no-literal-string': ['error', { markupOnly: true }],
     },
+    plugins: {
+      i18next
+    },
+
   },
 ];
