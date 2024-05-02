@@ -1,5 +1,3 @@
-import { Button } from "./ui/Button";
+import { Button } from './ui/Button';
 
-export {
-  Button
-};
+export { Button };
