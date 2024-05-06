@@ -17,3 +17,12 @@ declare module '*.svg' {
 }
 
 declare const __IS_DEV__: boolean;
+
+
+import { ReactNode } from 'react';
+
+declare module 'react-query/types/react/QueryClientProvider' {
+  interface QueryClientProviderProps {
+    children?: ReactNode;
+  }
+}

@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
 
 import { Button, ThemeButton } from './Button';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
@@ -8,10 +7,6 @@ import { Themes } from 'app/providers/ThemeProvider';
 const meta: Meta<typeof Button> = {
   title: 'shared/Button',
   component: Button,
-  // argTypes: {
-  //   backgroundColor: { control: 'color' },
-  // },
-  // args: { onClick: fn() },
 };
 
 export default meta;
