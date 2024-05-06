@@ -19,7 +19,7 @@ export default [
     rules: {
       semi: 'error',
       'prefer-const': 'error',
-      'max-len': ['error', { ignoreComments: true }],
+      'max-len': ['error', { ignoreComments: true, code: 120 }],
       'react/jsx-indent': [2, 2],
       indent: [2, 2],
       'object-curly-spacing': ['error', 'always'],
@@ -35,11 +35,25 @@ export default [
           ExportDeclaration: 'always',
         },
       ],
-      'i18next/no-literal-string': ['error', { markupOnly: true }],
+      'i18next/no-literal-string': [
+        'error', 
+        { 
+          markupOnly: true,
+          ignoreAttribute: ['data-testid', 'to'],
+        },
+      ],
+      'react/display-name': 'off',
     },
     plugins: {
       i18next
     },
-
+    // overrides: [
+    //   {
+    //     files: ['**/src/**/*.test.{ts,tsx}'],
+    //     rules: {
+    //       'i18next/no-literal-string': 'off',
+    //     }
+    //   }
+    // ]
   },
 ];
