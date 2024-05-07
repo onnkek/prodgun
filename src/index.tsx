@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import 'shared/config/i18n/i18n';
 import App from './app/App';
 import { ErrorBoundary } from 'app/providers/ErrorBoundary';
+import 'app/styles/index.sass';
 
 const container = document.getElementById('root');
 const root = createRoot(container); // createRoot(container!) if you use TypeScript

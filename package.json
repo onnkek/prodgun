@@ -63,6 +63,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-i18next": "^6.0.3",
     "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-storybook": "^0.8.0",
     "file-loader": "^6.2.0",
     "globals": "^15.1.0",
