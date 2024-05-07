@@ -13,7 +13,10 @@
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "test:ui": "npx loki test",
     "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
-    "test:ui:ok": "npx loki approve"
+    "test:ui:ok": "npx loki approve",
+    "test:ui:report": "npm run test:ui:json && npm run test:ui:html",
+    "test:ui:json": "node scripts/generate-visual-json-report.js",
+    "test:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html"
   },
   "repository": {
     "type": "git",
@@ -71,6 +74,7 @@
     "mini-css-extract-plugin": "^2.5.3",
     "prettier-plugin-organize-imports": "^3.2.4",
     "react-i18next": "^11.18.6",
+    "reg-cli": "^0.18.5",
     "regenerator-runtime": "^0.14.1",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
