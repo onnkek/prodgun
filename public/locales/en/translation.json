@@ -1,7 +1,8 @@
 {
   "Тестовый пример": "Test example",
   "Перевод": "Translate",
-  "Язык": "English",
+  "Lang": "English",
+  "ShortLang": "EN",
   "Страница не найдена": "Page not found",
   "Throw error": "Throw error",
   "An unexpected error occurred": "An unexpected error occurred",
