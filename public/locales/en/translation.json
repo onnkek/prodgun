@@ -9,5 +9,7 @@
   "Update page": "Update page",
   "Home": "Home",
   "About": "About",
-  "Login": "Login"
+  "Login": "Login",
+  "username": "username",
+  "password": "password"
 }
