@@ -1,4 +1,4 @@
-import webpack, { RuleSetRule } from 'webpack';
+import webpack, { DefinePlugin, RuleSetRule } from 'webpack';
 import { BuildPaths } from '../build/types/config';
 import path from 'path';
 import { buildCssLoader } from '../build/loaders/buildCssLoader';
@@ -22,7 +22,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
 
   config.module = config.module || {};
   config.module.rules = config.module.rules || [];
-  
+
   const imageRule = config.module.rules.find((rule) => rule?.['test']?.test('.svg'));
   if (imageRule) {
     imageRule['exclude'] = /\.svg$/;
@@ -32,5 +32,9 @@ export default ({ config }: { config: webpack.Configuration }) => {
     test: /\.svg$/,
     use: ['@svgr/webpack'],
   });
+
+  config.plugins?.push(new DefinePlugin({
+    __IS_DEV__: true,
+  }))
   return config;
 };

@@ -13,7 +13,7 @@ server.use(jsonServer.bodyParser);
 // Нужно для небольшой задержки, чтобы запрос проходил не мгновенно, имитация реального АПИ
 server.use(async (req, res, next) => {
   await new Promise((res) => {
-    setTimeout(res, 100);
+    setTimeout(res, 800);
   });
   next();
 });

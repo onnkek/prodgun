@@ -11,7 +11,10 @@
   "Update page": "Обновить страницу",
   "Home": "Главная",
   "About": "О сайте",
-  "Login": "Войти",
+  "Log in": "Войти",
+  "Log out": "Выйти",
   "username": "логин",
-  "password": "пароль"
+  "password": "пароль",
+  "Login form": "Вход",
+  "You have entered wrong username or password": "Вы ввели неверное имя пользователя или пароль"
 }

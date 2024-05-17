@@ -9,7 +9,10 @@
   "Update page": "Update page",
   "Home": "Home",
   "About": "About",
-  "Login": "Login",
+  "Log in": "Log in",
+  "Log out": "Log out",
   "username": "username",
-  "password": "password"
+  "password": "password",
+  "Login form": "Sign in",
+  "You have entered wrong username or password": "You have entered wrong username or password"
 }

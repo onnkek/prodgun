@@ -7,3 +7,5 @@ export {
   createReduxStore,
   StateScheme
 };
+export type AppStore = ReturnType<typeof createReduxStore>;
+export type AppDispatch = AppStore['dispatch'];
