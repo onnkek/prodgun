@@ -1,24 +1,18 @@
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { LangSwitcher } from 'shared/ui/LangSwitcher';
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
 import cls from './Sidebar.module.sass';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/ui/Button';
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
-import { useTranslation } from 'react-i18next';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import AboutIcon from 'shared/assets/icons/about-20-20.svg';
-import MainIcon from 'shared/assets/icons/main-20-20.svg';
+import { SidebarItem } from '../SidebarItem/SidebarItem';
+import { SidebarItemsList } from '../../model/types/item';
 
 interface SidebarProps {
   className?: string;
 }
 
-export const Sidebar = ({ className }: SidebarProps) => {
+export const Sidebar = memo(({ className }: SidebarProps) => {
   const [collapsed, setCollapsed] = useState(false);
-
-  const { t } = useTranslation();
-
   const onToggle = () => {
     setCollapsed((prev) => !prev);
   };
@@ -39,30 +33,9 @@ export const Sidebar = ({ className }: SidebarProps) => {
         {collapsed ? '>' : '<'}
       </Button>
       <div className={cls.items}>
-        <div>
-          <AppLink
-            theme={AppLinkTheme.SECONDARY}
-            to={RoutePath.main}
-            className={cls.item}
-          >
-            <MainIcon className={cls.icon} />
-            <span className={cls.link}>
-              {t('Home')}
-            </span>
-          </AppLink>
-        </div>
-        <div>
-          <AppLink
-            theme={AppLinkTheme.SECONDARY}
-            to={RoutePath.about}
-            className={cls.item}
-          >
-            <AboutIcon className={cls.icon} />
-            <span className={cls.link}>
-              {t('About')}
-            </span>
-          </AppLink>
-        </div>
+        {SidebarItemsList.map((item) => (
+          <SidebarItem key={item.path} item={item} collapsed={collapsed} />
+        ))}
       </div>
 
       <div className={cls.switchers}>
@@ -71,4 +44,4 @@ export const Sidebar = ({ className }: SidebarProps) => {
       </div>
     </div>
   );
-};
+});

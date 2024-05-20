@@ -34,11 +34,18 @@
     }
   ],
   "profile": {
-    "name": "typicode"
+    "first": "Admin",
+    "lastname": "",
+    "age": "99",
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Moscow",
+    "username": "admin",
+    "avatar": "https://img.freepik.com/premium-photo/sute-girl-hacker-with-laptop-avatar-cartoon-style-black-background-generated-ai_88188-3324.jpg?w=900"
   },
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "admin",
       "password": "123"
     }

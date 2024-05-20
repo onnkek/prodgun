@@ -7,7 +7,7 @@ const defaultAsyncReducers: Partial<ReducersMapObject<StateScheme>> = {
   loginForm: loginReducer,
 }
 
-export const StoreDecorator = (initialState: Partial<StateScheme>, asyncReducers: Partial<ReducersMapObject<StateScheme>>) => (Story: StoryFn) => (
+export const StoreDecorator = (initialState: Partial<StateScheme>, asyncReducers?: Partial<ReducersMapObject<StateScheme>>) => (Story: StoryFn) => (
   <StoreProvider
     initialState={initialState}
     asyncReducers={{ ...asyncReducers, ...defaultAsyncReducers }}
