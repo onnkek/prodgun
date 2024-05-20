@@ -20,12 +20,13 @@ export default function buildPlugins({ paths, isDev }: BuildOptions): webpack.We
     }),
 
   ];
-
+  
   if (isDev) {
     plugins.push(new webpack.HotModuleReplacementPlugin());
     plugins.push(new BundleAnalyzerPlugin({
-      openAnalyzer: false
-    }));
+    openAnalyzer: false
+  }));
+
   }
 
 
