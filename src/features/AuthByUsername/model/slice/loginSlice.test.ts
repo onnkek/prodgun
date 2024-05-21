@@ -4,7 +4,7 @@ import { loginActions, loginReducer } from "./loginSlice";
 describe('loginSlice', () => {
 
   test('test set username', async () => {
-    const state: Partial<LoginScheme> = { username: '123' };
+    const state: DeepPartial<LoginScheme> = { username: '123' };
     expect(loginReducer(
       state as LoginScheme,
       loginActions.setUsername('123123')
@@ -12,7 +12,7 @@ describe('loginSlice', () => {
   });
 
   test('test set password', async () => {
-    const state: Partial<LoginScheme> = { password: '123' };
+    const state: DeepPartial<LoginScheme> = { password: '123' };
     expect(loginReducer(
       state as LoginScheme,
       loginActions.setPassword('123123')
