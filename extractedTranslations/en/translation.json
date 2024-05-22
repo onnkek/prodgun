@@ -1,6 +1,8 @@
 {
   "About": "About",
   "An unexpected error occurred": "An unexpected error occurred",
+  "Avatar": "Avatar",
+  "Cancel": "Cancel",
   "Edit": "Edit",
   "Home": "Home",
   "Log in": "Log in",
@@ -9,12 +11,25 @@
   "Login form": "Login form",
   "PROFILE PAGE": "PROFILE PAGE",
   "Profile": "Profile",
+  "Save": "Save",
+  "Server error": "Server error",
   "Throw error": "Throw error",
+  "Try to reload page": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Update page": "Update page",
   "You have entered wrong username or password": "You have entered wrong username or password",
+  "Your age": "Your age",
+  "Your avatar path": "Your avatar path",
+  "Your city": "Your city",
   "Your first name": "Your first name",
   "Your last name": "Your last name",
   "Your name": "Your name",
+  "Your username": "Your username",
   "password": "password",
   "throw error": "throw error",
   "username": "username",
