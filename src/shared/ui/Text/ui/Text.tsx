@@ -30,6 +30,7 @@ export const Text: FC<TextProps> = memo(({ className, title, text, theme = TextT
 
   return (
     <div
+      data-testid="text"
       className={classNames(cls.textWrapper, mods, [className])}
       {...otherProps}
     >

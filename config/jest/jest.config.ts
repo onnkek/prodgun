@@ -19,6 +19,7 @@ const config: Config = {
   globals: {
     __IS_DEV__: true,
     __API__: '',
+    __PROJECT__: 'jest',
   },
   // Automatically clear mock calls, instances, contexts and results before every test
   clearMocks: true,

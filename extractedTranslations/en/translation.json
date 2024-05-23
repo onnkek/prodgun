@@ -1,10 +1,13 @@
 {
+  "": "",
   "About": "About",
+  "Age should be a number": "Age should be a number",
   "An unexpected error occurred": "An unexpected error occurred",
   "Avatar": "Avatar",
   "Cancel": "Cancel",
   "Edit": "Edit",
   "Home": "Home",
+  "Incorrect country": "Incorrect country",
   "Log in": "Log in",
   "Log out": "Log out",
   "Login": "Login",
@@ -15,6 +18,9 @@
   "Select country": "Select country",
   "Select currency": "Select currency",
   "Server error": "Server error",
+  "Server error while saving": "Server error while saving",
+  "The data is not specified": "The data is not specified",
+  "The first and last name cannot be empty": "The first and last name cannot be empty",
   "Throw error": "Throw error",
   "Try to reload page": {
     "": {
