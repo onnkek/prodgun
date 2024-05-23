@@ -7,6 +7,8 @@ import { Mods, classNames } from 'shared/lib/classNames/classNames';
 import { Loader } from 'shared/ui/Loader';
 import { TextAlign, TextTheme } from 'shared/ui/Text/ui/Text';
 import { Avatar } from 'shared/ui/Avatar';
+import { Currency, CurrencySelect } from 'entities/Currency';
+import { Country, CountrySelect } from 'entities/Country';
 
 export interface ProfileCardProps {
   className?: string;
@@ -20,6 +22,8 @@ export interface ProfileCardProps {
   onChangeCity?: (value?: string) => void;
   onChangeUsername?: (value?: string) => void;
   onChangeAvatar?: (value?: string) => void;
+  onChangeCurrency?: (value?: Currency) => void;
+  onChangeCountry?: (value?: Country) => void;
 }
 
 export const ProfileCard = ({
@@ -33,6 +37,8 @@ export const ProfileCard = ({
   onChangeCity,
   onChangeUsername,
   onChangeAvatar,
+  onChangeCurrency,
+  onChangeCountry,
   readonly
 }: ProfileCardProps) => {
   const { t } = useTranslation('profile');
@@ -110,6 +116,18 @@ export const ProfileCard = ({
           value={data?.avatar}
           placeholder={t('Your avatar path')}
           onChange={onChangeAvatar}
+          readonly={readonly}
+        />
+        <CurrencySelect
+          className={cls.input}
+          value={data?.currency}
+          onChange={onChangeCurrency}
+          readonly={readonly}
+        />
+        <CountrySelect
+          className={cls.input}
+          value={data?.country}
+          onChange={onChangeCountry}
           readonly={readonly}
         />
       </div>

@@ -1,4 +1,4 @@
-import { memo, useState } from 'react';
+import { memo, useMemo, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { LangSwitcher } from 'shared/ui/LangSwitcher';
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
@@ -17,31 +17,39 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
     setCollapsed((prev) => !prev);
   };
 
-  return (
-    <div
-      data-testid="sidebar"
-      className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}
-    >
-      <Button
-        data-testid="sidebar-toggle"
-        onClick={onToggle}
-        className={cls.collapseBtn}
-        theme={ButtonTheme.BACKGROUND_INVERTED}
-        square
-        size={ButtonSize.L}
-      >
-        {collapsed ? '>' : '<'}
-      </Button>
-      <div className={cls.items}>
-        {SidebarItemsList.map((item) => (
-          <SidebarItem key={item.path} item={item} collapsed={collapsed} />
-        ))}
-      </div>
+  const itemsList = useMemo(() => SidebarItemsList.map((item) => (
+    <SidebarItem
+      key={item.path}
+      item={item}
+      collapsed={collapsed}
+    />
+  )), [collapsed]);
 
-      <div className={cls.switchers}>
-        <ThemeSwitcher />
-        <LangSwitcher short={collapsed} className={cls.lang} />
-      </div>
+return (
+  <div
+    data-testid="sidebar"
+    className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}
+  >
+    <Button
+      data-testid="sidebar-toggle"
+      onClick={onToggle}
+      className={cls.collapseBtn}
+      theme={ButtonTheme.BACKGROUND_INVERTED}
+      square
+      size={ButtonSize.L}
+    >
+      {collapsed ? '>' : '<'}
+    </Button>
+    <div className={cls.items}>
+      {SidebarItemsList.map((item) => (
+        <SidebarItem key={item.path} item={item} collapsed={collapsed} />
+      ))}
     </div>
-  );
+
+    <div className={cls.switchers}>
+      <ThemeSwitcher />
+      <LangSwitcher short={collapsed} className={cls.lang} />
+    </div>
+  </div>
+);
 });
