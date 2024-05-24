@@ -8,6 +8,9 @@ import reactHooks from 'eslint-plugin-react-hooks';
 
 export default [
   {
+    ignores: [".fttemplates/*"]
+  },
+  {
     languageOptions: {
       globals: globals.browser,
     },
