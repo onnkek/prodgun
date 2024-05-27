@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Text, TextTheme } from './Text';
+import { Text, TextSize, TextTheme } from './Text';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Themes } from 'app/providers/ThemeProvider';
 
@@ -72,5 +72,24 @@ export const OnlyTextDark: Story = {
   },
   decorators: [ThemeDecorator(Themes.DARK)],
 };
+
+export const SizeL: Story = {
+  args: {
+    title: 'Title lorem one two three',
+    text: 'Text description description description description',
+    size: TextSize.L
+  },
+  decorators: [ThemeDecorator(Themes.LIGHT)],
+};
+
+export const SizeMDark: Story = {
+  args: {
+    title: 'Title lorem one two three',
+    text: 'Text description description description description',
+    size: TextSize.M
+  },
+  decorators: [ThemeDecorator(Themes.DARK)],
+};
+
 
 

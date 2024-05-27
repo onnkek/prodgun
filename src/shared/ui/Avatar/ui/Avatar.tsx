@@ -4,7 +4,7 @@ import { Mods, classNames } from 'shared/lib/classNames/classNames';
 
 export interface AvatarProps {
   className?: string;
-  src: string;
+  src?: string;
   size?: number;
   alt: string;
 }
