@@ -98,13 +98,22 @@
       "id": "1",
       "username": "admin",
       "password": "admin",
-      "role": "admin"
+      "role": "admin",
+      "avatar": "https://img.freepik.com/premium-photo/sute-girl-hacker-with-laptop-avatar-cartoon-style-black-background-generated-ai_88188-3324.jpg?w=900"
     },
     {
       "id": "2",
       "username": "kinder",
       "password": "kinder",
-      "role": "user"
+      "role": "user",
+      "avatar": "https://blog.ferplast.com/wp-content/uploads/2015/08/tardar-sauce-grumpy-cat-gatto-più-ricco-del-mondo-ferplast-1024x682.jpg"
+    },
+    {
+      "id": "3",
+      "username": "onnkek",
+      "password": "onnkek",
+      "role": "user",
+      "avatar": "https://masterpiecer-images.s3.yandex.net/6bbfdce3a42011eea88d5601f9285731:upscaled"
     }
   ]
 }
