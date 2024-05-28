@@ -5,6 +5,7 @@ import { Currency } from 'entities/Currency';
 import { ValidateProfileError } from '../../types/profile';
 
 const data = {
+  id: '1',
   first: 'TestFirstName',
   lastname: 'TestLastName',
   username: 'testname',

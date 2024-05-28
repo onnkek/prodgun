@@ -81,18 +81,56 @@
       "text": "Consectetur excepteur consequat esse fugiat tempor sunt.",
       "articleId": "1",
       "userId": "2"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "lol",
+      "id": "XI2U8bn"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "123",
+      "id": "YfAPceM"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "123",
+      "id": "_OqNit1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "ABCD",
+      "id": "59KA1Z5"
     }
   ],
-  "profile": {
-    "first": "Admin",
-    "lastname": " ",
-    "age": 99,
-    "currency": "USD",
-    "country": "USA",
-    "city": "Moscow",
-    "username": "admin",
-    "avatar": "https://img.freepik.com/premium-photo/sute-girl-hacker-with-laptop-avatar-cartoon-style-black-background-generated-ai_88188-3324.jpg?w=900"
-  },
+  "profile": [
+    {
+      "id": "1",
+      "first": "Admin",
+      "lastname": " ",
+      "age": 999,
+      "currency": "USD",
+      "country": "USA",
+      "city": "Moscow",
+      "username": "admin",
+      "avatar": "https://img.freepik.com/premium-photo/sute-girl-hacker-with-laptop-avatar-cartoon-style-black-background-generated-ai_88188-3324.jpg?w=900"
+    },
+    {
+      "id": "2",
+      "first": "Onnkek",
+      "lastname": " ",
+      "age": 99,
+      "currency": "USD",
+      "country": "USA",
+      "city": "Moscow",
+      "username": "onnkek",
+      "avatar": "https://masterpiecer-images.s3.yandex.net/6bbfdce3a42011eea88d5601f9285731:upscaled"
+    }
+  ],
   "users": [
     {
       "id": "1",
@@ -103,13 +141,6 @@
     },
     {
       "id": "2",
-      "username": "kinder",
-      "password": "kinder",
-      "role": "user",
-      "avatar": "https://blog.ferplast.com/wp-content/uploads/2015/08/tardar-sauce-grumpy-cat-gatto-più-ricco-del-mondo-ferplast-1024x682.jpg"
-    },
-    {
-      "id": "3",
       "username": "onnkek",
       "password": "onnkek",
       "role": "user",
