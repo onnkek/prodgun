@@ -18,6 +18,10 @@ const article: Article = {
   "img": "https://etzq49yfnmd.exactdn.com/wp-content/uploads/2022/03/cicero_gradient.png?strip=all&lossy=1&ssl=1",
   "views": 1022,
   "createdAt": "24.05.2024",
+  user: {
+    id: '1',
+    username: 'admin'
+  },
   "type": [ArticleType.IT],
   "blocks": [
     {
@@ -80,7 +84,7 @@ type Story = StoryObj<typeof ArticleDetails>;
 export const Normal: Story = {
   args: {
 
-  },
+  }, 
   decorators: [ThemeDecorator(Themes.LIGHT), StoreDecorator({
     articleDetails: {
       data: article

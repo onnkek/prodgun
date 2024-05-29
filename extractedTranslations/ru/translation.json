@@ -5,6 +5,7 @@
   "An unexpected error occurred": "An unexpected error occurred",
   "Article not found": "Article not found",
   "Avatar": "Avatar",
+  "Back to articles": "Back to articles",
   "Cancel": "Cancel",
   "Comments": "Comments",
   "Comments not found": "Comments not found",
@@ -19,6 +20,13 @@
   "Login form": "Login form",
   "PROFILE PAGE": "PROFILE PAGE",
   "Profile": "Profile",
+  "Read full": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Save": "Save",
   "Select country": "Select country",
   "Select currency": "Select currency",
