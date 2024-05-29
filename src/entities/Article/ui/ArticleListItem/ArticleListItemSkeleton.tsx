@@ -1,14 +1,7 @@
-import { Text } from 'shared/ui/Text';
-import { ArticleBlockType, ArticleTextBlock, ArticleView } from '../../model/types/article';
+import { ArticleView } from '../../model/types/article';
 import cls from './ArticleListItem.module.sass';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Icon } from 'shared/ui/Icon';
-import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
 import { Card } from 'shared/ui/Card';
-import { Avatar } from 'shared/ui/Avatar';
-import { Button } from 'shared/ui/Button';
-import { ButtonTheme } from 'shared/ui/Button/ui/Button';
-import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ui/ArticleTextBlockComponent';
 import { Skeleton } from 'shared/ui/Skeleton';
 
 export interface ArticleListItemSkeletonProps {
