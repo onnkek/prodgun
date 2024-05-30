@@ -2,7 +2,6 @@ import { Article, ArticleView } from '../../model/types/article';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import cls from './ArticleList.module.sass';
-import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 
 export interface ArticleListProps {
@@ -13,19 +12,6 @@ export interface ArticleListProps {
 }
 
 export const ArticleList = ({ className, articles, isLoading, view = ArticleView.LIST }: ArticleListProps) => {
-  const { t } = useTranslation();
-
-  // if (isLoading) {
-  //   return (
-  //     <div className={classNames(cls.articleListItem, {}, [className, cls[view]])}>
-  //       {
-  //         new Array(view === ArticleView.PLATE ? 9 : 3).fill(0).map((item, index) => (
-  //           <ArticleListItemSkeleton className={cls.card} view={view} key={index} />
-  //         ))
-  //       }
-  //     </div>
-  //   );
-  // }
 
   const renderArticles = (article: Article) => {
     return <ArticleListItem

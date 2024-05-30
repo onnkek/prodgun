@@ -29,7 +29,11 @@ export const CommentList = ({ className, comments, isLoading }: CommentListProps
     <div className={classNames(cls.commentList, {}, [className])}>
       {comments?.length ?
         comments.map(comment => (
-          <CommentCard isLoading={isLoading} comment={comment} />
+          <CommentCard
+            isLoading={isLoading}
+            comment={comment}
+            key={comment.id}
+          />
         )) :
         <Text text={t('Comments not found')} />
       }

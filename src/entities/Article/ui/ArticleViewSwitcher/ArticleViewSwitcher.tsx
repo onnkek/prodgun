@@ -36,8 +36,15 @@ export const ArticleViewSwitcher = ({ className, view, onViewClick }: ArticleVie
   return (
     <div className={classNames(cls.articleViewSwitcher, {}, [className])}>
       {viewTypes.map((viewType) => (
-        <Button theme={ButtonTheme.CLEAR} onClick={onClick(viewType.view)}>
-          <Icon Svg={viewType.icon} className={classNames('', { [cls.selected]: viewType.view === view }, [])} />
+        <Button
+          theme={ButtonTheme.CLEAR}
+          onClick={onClick(viewType.view)}
+          key={viewType.view}
+        >
+          <Icon
+            Svg={viewType.icon}
+            className={classNames('', { [cls.selected]: viewType.view === view }, [])}
+          />
         </Button>
       ))}
     </div>
