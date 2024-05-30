@@ -11,9 +11,15 @@ import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchA
 import { useSelector } from 'react-redux';
 import {
   getArticlesPageError,
+  getArticlesPageHasMore,
   getArticlesPageIsLoading,
+  getArticlesPageNumber,
   getArticlesPageView
-} from '../../model/selectors/ArticlesPageSelectors';
+} from '../../model/selectors/articlesPageSelectors';
+import { Page } from 'shared/ui/Page';
+import { fetchNextArticlesPage } from 'pages/ArticlesPage/model/services/fetchNextArticlesPage/fetchNextArticlesPage';
+import { Text } from 'shared/ui/Text';
+import { TextTheme } from 'shared/ui/Text/ui/Text';
 
 export interface ArticlesPageProps {
   className?: string;
@@ -35,21 +41,31 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
     dispatch(articlesPageActions.setView(view));
   }, [dispatch]);
 
+  const onLoadNextPage = useCallback(() => {
+    dispatch(fetchNextArticlesPage());
+  }, [dispatch]);
+
   useInitialEffect(() => {
-    dispatch(fetchArticlesList());
     dispatch(articlesPageActions.initState());
+    dispatch(fetchArticlesList({
+      page: 1
+    }));
   });
+
+  if (error) {
+    return <Text text={t('Loading error...')} theme={TextTheme.ERROR} />;
+  }
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.articlesPage, {}, [className])}>
+      <Page className={classNames(cls.articlesPage, {}, [className])} onScrollEnd={onLoadNextPage}>
         <ArticleViewSwitcher view={view} onViewClick={onChangeView} />
         <ArticleList
           articles={articles}
           view={view}
           isLoading={isLoading}
         />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   );
 };
