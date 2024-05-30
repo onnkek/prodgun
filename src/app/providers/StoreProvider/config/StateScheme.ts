@@ -11,6 +11,7 @@ import { CounterScheme } from 'entities/Counter';
 import { ProfileScheme } from 'entities/Profile';
 import { UserScheme } from 'entities/User';
 import { LoginScheme } from 'features/AuthByUsername';
+import { UIScheme } from 'features/UI/model/types/UISchema';
 import { AddCommentFormScheme } from 'features/addCommentForm';
 import { ArticleDetailsCommentsScheme } from 'pages/ArticleDetailsPage';
 import { ArticlesPageScheme } from 'pages/ArticlesPage';
@@ -18,6 +19,7 @@ import { ArticlesPageScheme } from 'pages/ArticlesPage';
 export interface StateScheme {
   counter: CounterScheme;
   user: UserScheme;
+  UI: UIScheme;
 
   // async
   loginForm?: LoginScheme;

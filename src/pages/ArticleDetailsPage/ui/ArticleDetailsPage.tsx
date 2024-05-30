@@ -18,7 +18,7 @@ import cls from './ArticleDetailsPage.module.sass';
 import { Button } from "shared/ui/Button";
 import { ButtonTheme } from "shared/ui/Button/ui/Button";
 import { RoutePath } from "shared/config/routeConfig/routeConfig";
-import { Page } from "shared/ui/Page";
+import { Page } from "widgets/Page";
 
 export interface ArticleDetailsPageProps {
   className?: string;

@@ -2600,7 +2600,6 @@
         }
       ]
     }
-    
   ],
   "comments": [
     {
@@ -2650,6 +2649,18 @@
       "userId": "2",
       "text": "WOW",
       "id": "wK8ouIg"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "HI",
+      "id": "8Nk9KCc"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "111234",
+      "id": "p1R5ga7"
     }
   ],
   "profile": [

@@ -36,7 +36,6 @@ const articlesPageSlice = createSlice({
     },
     setPage: (state, action: PayloadAction<number>) => {
       state.page = action.payload;
-      localStorage.setItem(ARTICLE_VIEW_LOCALSTORAGE_KEY, String(action.payload));
     },
     initState: state => {
       state._inited = true;

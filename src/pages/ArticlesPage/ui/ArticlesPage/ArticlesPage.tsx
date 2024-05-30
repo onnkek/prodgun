@@ -13,11 +13,11 @@ import {
   getArticlesPageIsLoading,
   getArticlesPageView
 } from '../../model/selectors/articlesPageSelectors';
-import { Page } from 'shared/ui/Page';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { Text } from 'shared/ui/Text';
 import { TextTheme } from 'shared/ui/Text/ui/Text';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
+import { Page } from 'widgets/Page';
 
 export interface ArticlesPageProps {
   className?: string;
