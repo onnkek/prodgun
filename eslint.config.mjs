@@ -43,7 +43,7 @@ export default [
         'error',
         {
           markupOnly: true,
-          ignoreAttribute: ['data-testid', 'to'],
+          ignoreAttribute: ['data-testid', 'to', 'target'],
         },
       ],
       'react/display-name': 'off',

@@ -36,10 +36,13 @@ export const Page = ({ className, children, onScrollEnd }: PageProps) => {
   });
 
   const onScroll = useThrottle((e: UIEvent<HTMLDivElement>) => {
-    dispatch(UIActions.setScrollPosition({
-      position: e.currentTarget.scrollTop,
-      path: pathname
-    }))
+    //if (e.currentTarget) {
+      dispatch(UIActions.setScrollPosition({
+        position: e.currentTarget.scrollTop,
+        path: pathname
+      }))
+    //}
+
   }, 400);
 
   return (
@@ -49,7 +52,7 @@ export const Page = ({ className, children, onScrollEnd }: PageProps) => {
       className={classNames(cls.page, {}, [className])}
     >
       {children}
-      <div ref={triggerRef} />
+      {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
     </section>
   );
 };

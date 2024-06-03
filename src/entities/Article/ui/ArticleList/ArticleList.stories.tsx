@@ -5,7 +5,7 @@ import { Themes } from 'app/providers/ThemeProvider';
 import { ArticleList } from './ArticleList';
 
 const meta: Meta<typeof ArticleList> = {
-  title: 'shared/ArticleList',
+  title: 'entities/ArticleList',
   component: ArticleList,
 };
 

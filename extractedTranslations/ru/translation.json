@@ -2,17 +2,24 @@
   "": "",
   "About": "About",
   "Age should be a number": "Age should be a number",
+  "All": "All",
   "An unexpected error occurred": "An unexpected error occurred",
   "Article not found": "Article not found",
+  "Articles not found": "Articles not found",
+  "Ascending": "Ascending",
   "Avatar": "Avatar",
   "Back to articles": "Back to articles",
   "Cancel": "Cancel",
   "Comments": "Comments",
   "Comments not found": "Comments not found",
+  "Creation date": "Creation date",
+  "Descending": "Descending",
+  "Economics": "Economics",
   "Edit": "Edit",
   "Error": "Error",
   "Home": "Home",
   "How about comment?": "How about comment?",
+  "IT": "IT",
   "Incorrect country": "Incorrect country",
   "Loading error": {
     "": {
@@ -34,15 +41,33 @@
       }
     }
   },
+  "Recommend": "Recommend",
   "Save": "Save",
+  "Science": "Science",
+  "Search": "Search",
   "Select country": "Select country",
   "Select currency": "Select currency",
   "Send": "Send",
   "Server error": "Server error",
   "Server error while saving": "Server error while saving",
+  "Sort by": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
+  "Sort on": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "The data is not specified": "The data is not specified",
   "The first and last name cannot be empty": "The first and last name cannot be empty",
   "Throw error": "Throw error",
+  "Title": "Title",
   "Try to reload page": {
     "": {
       "": {
@@ -51,6 +76,7 @@
     }
   },
   "Update page": "Update page",
+  "Views": "Views",
   "You have entered wrong username or password": "You have entered wrong username or password",
   "Your age": "Your age",
   "Your avatar path": "Your avatar path",
@@ -59,6 +85,7 @@
   "Your last name": "Your last name",
   "Your name": "Your name",
   "Your username": "Your username",
+  "by": "by",
   "password": "password",
   "throw error": "throw error",
   "username": "username",
