@@ -14,6 +14,7 @@ interface SidebarItemProps {
 }
 
 export const SidebarItem = memo(({ item, collapsed }: SidebarItemProps) => {
+  // i18next-extract-disable-next-line
   const { t } = useTranslation();
 
   const isAuth = useSelector(getUserAuthData);

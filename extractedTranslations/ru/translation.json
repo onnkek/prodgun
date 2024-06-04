@@ -12,6 +12,7 @@
   "Cancel": "Cancel",
   "Comments": "Comments",
   "Comments not found": "Comments not found",
+  "Create article": "Create article",
   "Creation date": "Creation date",
   "Descending": "Descending",
   "Economics": "Economics",
@@ -21,6 +22,7 @@
   "How about comment?": "How about comment?",
   "IT": "IT",
   "Incorrect country": "Incorrect country",
+  "Lang": "Lang",
   "Loading error": {
     "": {
       "": {
@@ -33,6 +35,7 @@
   "Login": "Login",
   "Login form": "Login form",
   "PROFILE PAGE": "PROFILE PAGE",
+  "Prodgun": "Prodgun",
   "Profile": "Profile",
   "Read full": {
     "": {
@@ -50,6 +53,7 @@
   "Send": "Send",
   "Server error": "Server error",
   "Server error while saving": "Server error while saving",
+  "ShortLang": "ShortLang",
   "Sort by": {
     "": {
       "": {
