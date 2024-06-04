@@ -11,7 +11,7 @@ interface StoreProviderProps {
 }
 
 export const StoreProvider = ({ children, initialState, asyncReducers }: StoreProviderProps) => {
-  console.log("RENDER STORE")
+  console.log('RENDER STORE');
   const store = createReduxStore(
     initialState as StateScheme,
     asyncReducers as ReducersMapObject<StateScheme>,

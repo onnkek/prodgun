@@ -49,7 +49,7 @@ export const ArticleListItem = ({ className, article, view, target }: ArticleLis
           </div>
         </Card>
       </div>
-    )
+    );
   }
 
   return (

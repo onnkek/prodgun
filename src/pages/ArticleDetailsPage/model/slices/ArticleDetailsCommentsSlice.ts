@@ -2,7 +2,7 @@ import {
   PayloadAction,
   createEntityAdapter,
   createSlice
-} from '@reduxjs/toolkit'
+} from '@reduxjs/toolkit';
 import { StateScheme } from 'app/providers/StoreProvider';
 import { Comment } from 'entities/Comment';
 import { ArticleDetailsCommentsScheme } from '../types/ArticleDetailsCommentsScheme';
@@ -40,7 +40,7 @@ const ArticleDetailsCommentsSlice = createSlice({
       .addCase(fetchCommentsByArticleId.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
-      })
+      });
   }
 });
 

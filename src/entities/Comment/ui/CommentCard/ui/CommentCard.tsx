@@ -24,7 +24,7 @@ export const CommentCard = ({ className, comment, isLoading }: CommentCardProps)
         </div>
         <Skeleton className={cls.text} />
       </div>
-    )
+    );
   }
 
   if (!comment) {

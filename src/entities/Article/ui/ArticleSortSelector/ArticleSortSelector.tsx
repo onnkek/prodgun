@@ -15,7 +15,13 @@ export interface ArticleSortSelectorProps {
   onChangeSort: (newSort: ArticleSortField) => void;
 }
 
-export const ArticleSortSelector = ({ className, order, sort, onChangeOrder, onChangeSort }: ArticleSortSelectorProps) => {
+export const ArticleSortSelector = ({
+  className,
+  order,
+  sort,
+  onChangeOrder,
+  onChangeSort
+}: ArticleSortSelectorProps) => {
   const { t } = useTranslation();
 
   const orderOptions = useMemo<SelectOption<SortOrder>[]>(() => [

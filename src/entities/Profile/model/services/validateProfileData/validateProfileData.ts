@@ -1,4 +1,4 @@
-import { Profile, ValidateProfileError } from "../../types/profile";
+import { Profile, ValidateProfileError } from '../../types/profile';
 
 export const validateProfileData = (profile?: Profile) => {
   if (!profile) {
@@ -20,4 +20,4 @@ export const validateProfileData = (profile?: Profile) => {
   }
 
   return errors;
-}
+};

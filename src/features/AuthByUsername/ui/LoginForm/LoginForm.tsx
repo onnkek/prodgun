@@ -24,7 +24,7 @@ export interface LoginFormProps {
 
 const initialReducers: ReducersList = {
   loginForm: loginReducer
-}
+};
 
 const LoginForm: FC<LoginFormProps> = memo(({ className, onSuccess }) => {
   const { t } = useTranslation();
@@ -78,7 +78,7 @@ const LoginForm: FC<LoginFormProps> = memo(({ className, onSuccess }) => {
           onClick={onLoginClick}
           disabled={isLoading}
         >
-          {t("Login")}
+          {t('Login')}
         </Button>
       </div>
     </DynamicModuleLoader>

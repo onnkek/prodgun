@@ -22,7 +22,7 @@ export interface AddCommentFormProps {
 
 const reducers: ReducersList = {
   addCommentForm: addCommentFormReducer
-}
+};
 
 const AddCommentForm = ({ className, onSendComment }: AddCommentFormProps) => {
   const { t } = useTranslation();

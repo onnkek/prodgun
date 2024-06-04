@@ -6,7 +6,11 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/Dynamic
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { fetchArticleById } from '../../../model/services/fetchArticleById/fetchArticleById';
 import { useSelector } from 'react-redux';
-import { getArticleDetailsData, getArticleDetailsError, getArticleDetailsIsLoading } from '../../../model/selectors/getArticleDetails';
+import {
+  getArticleDetailsData,
+  getArticleDetailsError,
+  getArticleDetailsIsLoading
+} from '../../../model/selectors/getArticleDetails';
 import { Text } from 'shared/ui/Text';
 import { TextAlign, TextSize } from 'shared/ui/Text/ui/Text';
 import { Skeleton } from 'shared/ui/Skeleton';
@@ -26,7 +30,7 @@ export interface ArticleDetailsProps {
 
 const reducers: ReducersList = {
   articleDetails: articleDetailsReducer,
-}
+};
 
 export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
   const { t } = useTranslation();

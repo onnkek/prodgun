@@ -26,7 +26,7 @@ import { Page } from 'widgets/Page';
 
 const reducers: ReducersList = {
   profile: profileReducer
-}
+};
 
 const ProfilePage = () => {
   const { t } = useTranslation();

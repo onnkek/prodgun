@@ -27,7 +27,7 @@ export const ArticleListItemSkeleton = ({ className, view }: ArticleListItemSkel
           </div>
         </Card>
       </div>
-    )
+    );
   }
 
   return (

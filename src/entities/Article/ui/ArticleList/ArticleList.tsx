@@ -25,8 +25,8 @@ export const ArticleList = ({ className, articles, isLoading, view = ArticleView
       className={cls.card}
       key={article.id}
       target={target}
-    />
-  }
+    />;
+  };
 
   if (!isLoading && !articles.length) {
     return (

@@ -22,7 +22,7 @@ const AppRouter = () => {
         </RequireAuth>
         : element
       }
-    />)
+    />);
   }, []);
 
   return (

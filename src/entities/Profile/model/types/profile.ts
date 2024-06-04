@@ -1,5 +1,5 @@
-import { Country } from "entities/Country";
-import { Currency } from "entities/Currency";
+import { Country } from 'entities/Country';
+import { Currency } from 'entities/Currency';
 
 export enum ValidateProfileError {
   INCORRECT_USER_DATA = 'INCORRECT_USER_DATA',

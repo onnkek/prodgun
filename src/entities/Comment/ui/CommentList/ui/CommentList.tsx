@@ -22,7 +22,7 @@ export const CommentList = ({ className, comments, isLoading }: CommentListProps
         <CommentCard isLoading />
         <CommentCard isLoading />
       </div>
-    )
+    );
   }
 
   return (

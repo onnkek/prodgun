@@ -27,16 +27,16 @@ export const Select = <T extends string>({ className, label, options, value, onC
       >
         {opt.content}
       </option>
-    ))
+    ));
   }, [options]);
 
   const onChangeHandler = (e: ChangeEvent<HTMLSelectElement>) => {
     onChange?.(e.target.value as T);
-  }
+  };
 
   const mods: Mods = {
     [cls.readonly]: readonly,
-  }
+  };
 
   return (
     <div className={classNames(cls.wrapper, mods, [className])}>

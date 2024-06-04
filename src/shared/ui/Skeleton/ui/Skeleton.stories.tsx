@@ -24,7 +24,7 @@ export const Circle: Story = {
   args: {
     width: 100,
     height: 100,
-    border: "50%"
+    border: '50%'
   },
   decorators: [ThemeDecorator(Themes.LIGHT)],
 };
@@ -41,7 +41,7 @@ export const CircleDark: Story = {
   args: {
     width: 100,
     height: 100,
-    border: "50%"
+    border: '50%'
   },
   decorators: [ThemeDecorator(Themes.DARK)],
 };

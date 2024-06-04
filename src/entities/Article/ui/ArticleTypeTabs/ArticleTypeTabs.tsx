@@ -30,7 +30,7 @@ export const ArticleTypeTabs = ({ className, value, onChangeType }: ArticleTypeT
       value: ArticleType.SCIENCE,
       content: t('Science')
     }
-  ], []);
+  ], [t]);
 
   const onTabClick = useCallback((tab: TabItem) => {
     onChangeType(tab.value as ArticleType);

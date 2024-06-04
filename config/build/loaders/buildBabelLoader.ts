@@ -1,4 +1,4 @@
-import { BuildOptions } from "../types/config";
+import { BuildOptions } from '../types/config';
 
 export function buildBabelLoader(options: BuildOptions) {
   const { isDev } = options;

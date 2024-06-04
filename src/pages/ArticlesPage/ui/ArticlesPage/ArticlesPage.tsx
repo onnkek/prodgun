@@ -27,7 +27,7 @@ export interface ArticlesPageProps {
 
 const reducers: ReducersList = {
   articlesPage: articlesPageReducer
-}
+};
 
 const ArticlesPage = ({ className }: ArticlesPageProps) => {
   const { t } = useTranslation('article');

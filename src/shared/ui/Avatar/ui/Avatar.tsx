@@ -16,8 +16,8 @@ export const Avatar = ({ className, src, size, alt }: AvatarProps) => {
     return {
       width: size,
       height: size,
-    }
-  }, []);
+    };
+  }, [size]);
 
   return (
     <img

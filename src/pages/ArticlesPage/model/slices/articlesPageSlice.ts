@@ -2,7 +2,7 @@ import {
   PayloadAction,
   createEntityAdapter,
   createSlice
-} from '@reduxjs/toolkit'
+} from '@reduxjs/toolkit';
 import { StateScheme } from 'app/providers/StoreProvider';
 import { Article, ArticleSortField, ArticleType, ArticleView } from 'entities/Article';
 import { ArticlesPageScheme } from '../types/articlesPageScheme';
@@ -84,7 +84,7 @@ const articlesPageSlice = createSlice({
       .addCase(fetchArticlesList.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
-      })
+      });
   }
 });
 
