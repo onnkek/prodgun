@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkprodgun=self.webpackChunkprodgun||[]).push([[297],{2297:(n,r,u)=>{u.r(r),u.d(r,{default:()=>a});var t=u(4848),e=u(5435),s=u(8620);const a=function(){var n=(0,e.B)("about").t;return(0,t.jsx)(s.Y,{children:String(n("О сайте"))})}}}]);
