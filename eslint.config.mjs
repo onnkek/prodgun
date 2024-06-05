@@ -5,6 +5,8 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 import i18next from 'eslint-plugin-i18next';
 import reactHooks from 'eslint-plugin-react-hooks';
+import onnkekPlugin from 'eslint-plugin-path-onnkek';
+import local from "./test.js";
 
 export default [
   {
@@ -23,7 +25,7 @@ export default [
     rules: {
       semi: 'error',
       'prefer-const': 'error',
-      'max-len': ['error', { ignoreComments: true, code: 120 }],
+      'max-len': ['error', { ignoreComments: true, code: 140 }],
       'react/jsx-indent': [2, 2],
       indent: ['error', 2, {
         'SwitchCase': 1
@@ -50,10 +52,12 @@ export default [
       'react/prop-types': ['warn'],
       '@typescript-eslint/no-explicit-any': ['warn'],
       'react-hooks/exhaustive-deps': 'error',
+      'onnkekPlugin/path-checker': 'error'
     },
     plugins: {
       i18next,
-      'react-hooks': reactHooks
+      'react-hooks': reactHooks,
+      onnkekPlugin,
     },
   },
   //overrides

@@ -102,13 +102,13 @@ export const ArticleList = ({ className, articles, isLoading, view = ArticleView
       )}
     </WindowScroller>
 
-    // <div className={classNames(cls.articleList, {}, [className, cls[view]])}>
-    //   {articles.length > 0 ?
-    //     articles.map(renderArticles) :
-    //     null}
-    //   {isLoading && new Array(view === ArticleView.PLATE ? 9 : 3).fill(0).map((item, index) => (
-    //     <ArticleListItemSkeleton className={cls.card} view={view} key={index} />
-    //   ))}
-    // </div>
+  // <div className={classNames(cls.articleList, {}, [className, cls[view]])}>
+  //   {articles.length > 0 ?
+  //     articles.map(renderArticles) :
+  //     null}
+  //   {isLoading && new Array(view === ArticleView.PLATE ? 9 : 3).fill(0).map((item, index) => (
+  //     <ArticleListItemSkeleton className={cls.card} view={view} key={index} />
+  //   ))}
+  // </div>
   );
 };

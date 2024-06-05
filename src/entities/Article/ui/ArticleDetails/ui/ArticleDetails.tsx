@@ -19,9 +19,9 @@ import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
 import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg';
 import { Icon } from 'shared/ui/Icon';
 import { ArticleBlock, ArticleBlockType } from '../../../model/types/article';
-import { ArticleCodeBlockComponent } from '../../ArticleCodeBlockComponent/ui/ArticleCodeBlockComponent';
-import { ArticleImageBlockComponent } from '../../ArticleImageBlockComponent/ui/ArticleImageBlockComponent';
-import { ArticleTextBlockComponent } from '../../ArticleTextBlockComponent/ui/ArticleTextBlockComponent';
+import { ArticleCodeBlockComponent } from '../../../ui/ArticleCodeBlockComponent/ui/ArticleCodeBlockComponent';
+import { ArticleImageBlockComponent } from '../../../ui/ArticleImageBlockComponent/ui/ArticleImageBlockComponent';
+import { ArticleTextBlockComponent } from '../../../ui/ArticleTextBlockComponent/ui/ArticleTextBlockComponent';
 
 export interface ArticleDetailsProps {
   className?: string;

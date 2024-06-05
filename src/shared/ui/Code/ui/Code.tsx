@@ -1,10 +1,10 @@
 import { useCallback } from 'react';
 import cls from './Code.module.sass';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Button } from 'shared/ui/Button';
-import { Icon } from 'shared/ui/Icon';
+import { Button } from '../../Button';
+import { Icon } from '../../Icon';
 import CopyIcon from 'shared/assets/icons/copy-20-20.svg';
-import { ButtonTheme } from 'shared/ui/Button/ui/Button';
+import { ButtonTheme } from '../../Button/ui/Button';
 
 export interface CodeProps {
   className?: string;

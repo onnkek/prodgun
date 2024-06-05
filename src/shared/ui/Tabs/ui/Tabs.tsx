@@ -1,8 +1,8 @@
 import { ReactNode, useCallback } from 'react';
 import cls from './Tabs.module.sass';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Card } from 'shared/ui/Card';
-import { CardTheme } from 'shared/ui/Card/ui/Card';
+import { Card } from '../../Card';
+import { CardTheme } from '../../Card/ui/Card';
 
 export interface TabItem {
   value: string;

@@ -1,4 +1,4 @@
-import { ArticleView } from 'entities/Article/model/types/article';
+import { ArticleView } from '../../model/types/article';
 import cls from './ArticleViewSwitcher.module.sass';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
