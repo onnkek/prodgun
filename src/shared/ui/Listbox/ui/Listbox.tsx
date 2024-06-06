@@ -9,14 +9,13 @@ import cls from './Listbox.module.sass';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button } from '../../Button';
 import { HStack } from '../../Stack';
+import { AnchorProps } from '@headlessui/react/dist/internal/floating';
 
 export interface ListboxItem {
   value: string;
   content: ReactNode;
   disabled?: boolean;
 }
-
-type DropdownAnchor = 'top' | 'bottom';
 
 interface ListboxProps {
   items?: ListboxItem[];
@@ -25,7 +24,7 @@ interface ListboxProps {
   onChange: <T extends string>(value: T) => void;
   className?: string;
   readonly?: boolean;
-  anchor?: DropdownAnchor;
+  anchor?: AnchorProps;
   label?: string;
 }
 
