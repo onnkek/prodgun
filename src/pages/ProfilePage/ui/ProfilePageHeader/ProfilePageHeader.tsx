@@ -9,6 +9,7 @@ import { getProfileData, getProfileReadonly, profileActions, updateProfileData }
 import { useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getUserAuthData } from 'entities/User';
+import { HStack } from 'shared/ui/Stack/HStack/HStack';
 
 export interface ProfilePageHeaderProps {
   className?: string;
@@ -34,33 +35,30 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
   }, [dispatch]);
 
   return (
-    <div className={classNames(cls.profilePageHeader, {}, [className])}>
+    <HStack max justify='between' className={classNames(cls.profilePageHeader, {}, [className])}>
       <Text title={t('Profile')} />
       {canEdit && (
-        <div className={cls.btnWrapper}>
+        <>
           {readonly ? (
             <Button
               onClick={onEdit}
               theme={ButtonTheme.OUTLINE}
-              className={cls.editBtn}
             >{t('Edit')}</Button>
           ) : (
-            <div>
+            <HStack gap='8'>
               <Button
                 onClick={onSave}
                 theme={ButtonTheme.OUTLINE}
-                className={cls.editBtn}
               >{t('Save')}</Button>
               <Button
                 onClick={onCancelEdit}
                 theme={ButtonTheme.OUTLINE_RED}
-                className={cls.editBtn}
               >{t('Cancel')}</Button>
-            </div>
+            </HStack>
 
           )}
-        </div>
+        </>
       )}
-    </div>
+    </HStack>
   );
 };
