@@ -1,6 +1,7 @@
 {
   "": "",
   "About": "About",
+  "Admin panel": "Admin panel",
   "Age should be a number": "Age should be a number",
   "All": "All",
   "An unexpected error occurred": "An unexpected error occurred",
@@ -82,6 +83,9 @@
   },
   "Update page": "Update page",
   "Views": "Views",
+  "You do not have access to this page": {
+    "": ""
+  },
   "You have entered wrong username or password": "You have entered wrong username or password",
   "Your age": "Your age",
   "Your avatar path": "Your avatar path",
