@@ -1,10 +1,10 @@
 import cls from './Dropdown.module.sass';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import { Fragment } from 'react/jsx-runtime';
 import { ReactNode } from 'react';
 import { AnchorProps } from '@headlessui/react/dist/internal/floating';
-import { AppLink } from 'shared/ui/AppLink';
+import { AppLink } from '../../../ui/AppLink';
 
 export interface DropdownItem {
   disabled?: boolean;
@@ -44,7 +44,7 @@ export const Dropdown = ({ className, items, trigger, anchor }: DropdownProps) =
                 as={AppLink}
                 to={item.href}
                 disabled={item.disabled}
-                key={item.href}
+                key={String(item.content)}
               >
                 {content}
               </MenuItem>
@@ -55,7 +55,7 @@ export const Dropdown = ({ className, items, trigger, anchor }: DropdownProps) =
             <MenuItem
               as={Fragment}
               disabled={item.disabled}
-              key={item.href}
+              key={String(item.content)}
             >
               {content}
             </MenuItem>

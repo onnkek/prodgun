@@ -1,6 +1,7 @@
 import { FC, InputHTMLAttributes, memo, useEffect, useRef, useState } from 'react';
 import { Mods, classNames } from 'shared/lib/classNames/classNames';
 import cls from './Input.module.sass';
+import { HStack } from 'shared/ui/Stack';
 
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readonly'>;
 
@@ -58,7 +59,7 @@ export const Input: FC<InputProps> = memo(({
   };
 
   return (
-    <div className={classNames(cls.inputWrapper, mods, [className])}>
+    <HStack max className={classNames(cls.inputWrapper, mods, [className])}>
       {placeholder && (
         <div className={cls.placeholder}>
           {`${placeholder}>`}
@@ -85,6 +86,6 @@ export const Input: FC<InputProps> = memo(({
         )}
       </div>
 
-    </div>
+    </HStack>
   );
 });

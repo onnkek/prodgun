@@ -7,7 +7,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { TextSize } from 'shared/ui/Text/ui/Text';
 import { HTMLAttributeAnchorTarget } from 'react';
-import { AutoSizer, List, ListRowProps, WindowScroller } from 'react-virtualized';
+import { List, ListRowProps, WindowScroller } from 'react-virtualized';
 import { PAGE_ID } from 'widgets/Page/ui/Page';
 
 export interface ArticleListProps {
@@ -20,15 +20,6 @@ export interface ArticleListProps {
 
 export const ArticleList = ({ className, articles, isLoading, view = ArticleView.LIST, target }: ArticleListProps) => {
   const { t } = useTranslation();
-  // const renderArticles = (article: Article) => {
-  //   return <ArticleListItem
-  //     article={article}
-  //     view={view}
-  //     className={cls.card}
-  //     key={article.id}
-  //     target={target}
-  //   />;
-  // };
 
   if (!isLoading && !articles.length) {
     return (
@@ -39,7 +30,7 @@ export const ArticleList = ({ className, articles, isLoading, view = ArticleView
   }
 
   const isList = view === ArticleView.LIST;
-  const itemsPerRow = isList ? 1 : 3;
+  const itemsPerRow = isList ? 1 : 4;
   const rowCount = isList ? articles.length : Math.ceil(articles.length / itemsPerRow);
 
   const rowRenderer = ({ index, isScrolling, key, style }: ListRowProps) => {

@@ -5,7 +5,7 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Themes } from 'app/providers/ThemeProvider';
 
 const meta: Meta<typeof ArticleViewSwitcher> = {
-  title: 'shared/ArticleViewSwitcher',
+  title: 'entities/ArticleViewSwitcher',
   component: ArticleViewSwitcher,
 };
 

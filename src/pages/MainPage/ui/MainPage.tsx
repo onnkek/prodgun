@@ -11,27 +11,6 @@ const MainPage = () => {
     <Page>
       <BugButton />
       {String(t('Главная страница'))}
-      <div>asfdsg</div>
-      <HStack>
-        <div>asfdsg</div>
-        <Listbox
-          defaultValue='Select value'
-          onChange={() => { }}
-          value={undefined}
-          items={[
-            { value: '1', content: '1' },
-            { value: '2', content: '2' },
-            { value: '3', content: '3', disabled: true },
-            { value: '4', content: '4' },
-            { value: '5', content: '5' },
-          ]}
-        />
-      </HStack>
-      <div>asfdsg</div>
-      <div>asfdsg</div>
-      <div>asfdsg</div>
-      <div>asfdsg</div>
-      <div>asfdsg</div>
     </Page>
   );
 };

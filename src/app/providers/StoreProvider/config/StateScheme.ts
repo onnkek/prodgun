@@ -8,22 +8,20 @@ import {
 import { AxiosInstance } from 'axios';
 import { ArticleDetailsScheme } from 'entities/Article';
 import { CounterScheme } from 'entities/Counter';
-import { ProfileScheme } from 'entities/Profile';
 import { UserScheme } from 'entities/User';
 import { LoginScheme } from 'features/AuthByUsername';
 import { UIScheme } from 'features/UI/model/types/UISchema';
 import { AddCommentFormScheme } from 'features/addCommentForm';
-import {
-  ArticleDetailsCommentsScheme,
-  ArticleDetailsPageScheme,
-  ArticleDetailsRecommendationsScheme
-} from 'pages/ArticleDetailsPage';
+import { ProfileScheme } from 'features/editableProfileCard';
+import { ArticleDetailsPageScheme } from 'pages/ArticleDetailsPage';
 import { ArticlesPageScheme } from 'pages/ArticlesPage';
+import { rtkApi } from 'shared/api/rtkApi';
 
 export interface StateScheme {
   counter: CounterScheme;
   user: UserScheme;
   UI: UIScheme;
+  [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>
 
   // async
   loginForm?: LoginScheme;

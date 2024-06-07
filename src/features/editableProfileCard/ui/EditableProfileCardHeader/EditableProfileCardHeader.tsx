@@ -1,21 +1,23 @@
-import { useSelector } from 'react-redux';
-import cls from './ProfilePageHeader.module.sass';
+import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
 import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Button } from 'shared/ui/Button';
-import { ButtonTheme } from 'shared/ui/Button/ui/Button';
-import { Text } from 'shared/ui/Text';
-import { getProfileData, getProfileReadonly, profileActions, updateProfileData } from 'entities/Profile';
+import { getUserAuthData } from 'entities/User';
+import { getProfileData } from '../../model/selectors/getProfileData/getProfileData';
 import { useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { getUserAuthData } from 'entities/User';
-import { HStack } from 'shared/ui/Stack/HStack/HStack';
+import { profileActions } from '../../model/slice/profileSlice';
+import { updateProfileData } from '../../model/services/updateProfileData/updateProfileData';
+import { HStack } from 'shared/ui/Stack';
+import { Text } from 'shared/ui/Text';
+import { Button } from 'shared/ui/Button';
+import { ButtonTheme } from 'shared/ui/Button/ui/Button';
 
-export interface ProfilePageHeaderProps {
+export interface EditableProfileCardHeaderProps {
   className?: string;
 }
 
-export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
+export const EditableProfileCardHeader = ({ className }: EditableProfileCardHeaderProps) => {
   const { t } = useTranslation();
   const readonly = useSelector(getProfileReadonly);
   const dispatch = useAppDispatch();
@@ -35,7 +37,7 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
   }, [dispatch]);
 
   return (
-    <HStack max justify='between' className={classNames(cls.profilePageHeader, {}, [className])}>
+    <HStack max justify='between' className={classNames('', {}, [className])}>
       <Text title={t('Profile')} />
       {canEdit && (
         <>
