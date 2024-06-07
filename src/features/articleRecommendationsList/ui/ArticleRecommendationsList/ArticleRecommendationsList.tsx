@@ -15,7 +15,7 @@ export const ArticleRecommendationsList = ({ className }: ArticleRecommendations
 
   const { data: articles, isLoading, error } = useArticleRecList(4);
 
-  if (isLoading || error) {
+  if (isLoading || error || !articles) {
     return null;
   }
 
@@ -29,6 +29,7 @@ export const ArticleRecommendationsList = ({ className }: ArticleRecommendations
         articles={articles}
         target='_blank'
         view={ArticleView.PLATE}
+        virtualized={false}
       />
     </VStack>
   );

@@ -16,9 +16,17 @@ export interface ArticleListProps {
   isLoading?: boolean;
   view?: ArticleView;
   target?: HTMLAttributeAnchorTarget;
+  virtualized?: boolean;
 }
 
-export const ArticleList = ({ className, articles, isLoading, view = ArticleView.LIST, target }: ArticleListProps) => {
+export const ArticleList = ({
+  className,
+  articles,
+  isLoading,
+  view = ArticleView.LIST,
+  target,
+  virtualized = true
+}: ArticleListProps) => {
   const { t } = useTranslation();
 
   if (!isLoading && !articles.length) {
@@ -75,31 +83,35 @@ export const ArticleList = ({ className, articles, isLoading, view = ArticleView
       }) => (
 
         <div className={classNames(cls.articleList, {}, [className, cls[view]])}>
-          <List
-            height={height ?? 700}
-            rowCount={rowCount}
-            rowHeight={isList ? 700 : 330}
-            rowRenderer={rowRenderer}
-            width={width ? width - 80 : 700}
-            autoHeight
-            scrollTop={scrollTop}
-            onScroll={onChildScroll}
-            isScrolling={isScrolling}
-          />
+          {virtualized ? (
+            <List
+              height={height ?? 700}
+              rowCount={rowCount}
+              rowHeight={isList ? 700 : 330}
+              rowRenderer={rowRenderer}
+              width={width ? width - 80 : 700}
+              autoHeight
+              scrollTop={scrollTop}
+              onScroll={onChildScroll}
+              isScrolling={isScrolling}
+            />
+          ) : (
+            articles.map(article => (
+              <ArticleListItem
+                article={article}
+                view={view}
+                target={target}
+                key={article.id}
+                className={cls.card}
+              />
+            ))
+          )}
+
           {isLoading && new Array(view === ArticleView.PLATE ? 9 : 3).fill(0).map((item, index) => (
             <ArticleListItemSkeleton className={cls.card} view={view} key={index} />
           ))}
         </div>
       )}
     </WindowScroller>
-
-  // <div className={classNames(cls.articleList, {}, [className, cls[view]])}>
-  //   {articles.length > 0 ?
-  //     articles.map(renderArticles) :
-  //     null}
-  //   {isLoading && new Array(view === ArticleView.PLATE ? 9 : 3).fill(0).map((item, index) => (
-  //     <ArticleListItemSkeleton className={cls.card} view={view} key={index} />
-  //   ))}
-  // </div>
   );
 };
