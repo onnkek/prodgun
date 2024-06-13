@@ -5,6 +5,8 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { BuildOptions } from './types/config';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
+import CircularDependencyPlugin from 'circular-dependency-plugin';
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 
 export default function buildPlugins({ paths, isDev, apiUrl, project }: BuildOptions): webpack.WebpackPluginInstance[] {
 
@@ -26,6 +28,18 @@ export default function buildPlugins({ paths, isDev, apiUrl, project }: BuildOpt
       patterns: [
         { from: paths.locales, to: paths.buildLocales }
       ]
+    }),
+    new CircularDependencyPlugin({
+      exclude: /node_modules/,
+      failOnError: true
+    }),
+    new ForkTsCheckerWebpackPlugin({
+      typescript: {
+        diagnosticOptions: {
+          semantic: true,
+          syntactic: true,
+        },
+      },
     })
   ];
 

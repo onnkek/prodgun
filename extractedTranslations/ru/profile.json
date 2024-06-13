@@ -1,0 +1,22 @@
+{
+  "Age should be a number": "Age should be a number",
+  "Avatar": "Avatar",
+  "Incorrect country": "Incorrect country",
+  "Server error": "Server error",
+  "Server error while saving": "Server error while saving",
+  "The data is not specified": "The data is not specified",
+  "The first and last name cannot be empty": "The first and last name cannot be empty",
+  "Try to reload page": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
+  "Your age": "Your age",
+  "Your avatar path": "Your avatar path",
+  "Your city": "Your city",
+  "Your first name": "Your first name",
+  "Your last name": "Your last name",
+  "Your username": "Your username"
+}
