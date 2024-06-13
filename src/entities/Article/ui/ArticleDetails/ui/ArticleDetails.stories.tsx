@@ -5,10 +5,10 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Themes } from 'app/providers/ThemeProvider';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import {
-  Article,
-  ArticleBlockType,
-  ArticleType
+  Article
 } from '../../../model/types/article';
+import { ArticleType } from '../../../model/consts/consts';
+import { ArticleBlockType } from '../../../model/consts/consts';
 
 const meta: Meta<typeof ArticleDetails> = {
   title: 'entities/ArticleDetails',

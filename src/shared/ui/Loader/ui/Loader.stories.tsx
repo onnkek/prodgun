@@ -6,17 +6,17 @@ import { Loader } from './Loader';
 
 const meta: Meta<typeof Loader> = {
   title: 'shared/Loader',
-  component: Loader,
+  component: Loader
 };
 
 export default meta;
 type Story = StoryObj<typeof Loader>;
 export const Light: Story = {
-  args: { },
+  args: {},
   decorators: [ThemeDecorator(Themes.LIGHT)],
 };
 
 export const Dark: Story = {
-  args: { },
+  args: {},
   decorators: [ThemeDecorator(Themes.DARK)],
 };

@@ -1,5 +1,7 @@
 import { Text } from 'shared/ui/Text';
-import { Article, ArticleBlockType, ArticleTextBlock, ArticleView } from '../../model/types/article';
+import { Article, ArticleTextBlock } from '../../model/types/article';
+import { ArticleView } from '../../model/consts/consts';
+import { ArticleBlockType } from '../../model/consts/consts';
 import cls from './ArticleListItem.module.sass';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';

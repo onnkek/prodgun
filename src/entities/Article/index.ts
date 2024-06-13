@@ -4,10 +4,10 @@ export { ArticleViewSwitcher } from './ui/ArticleViewSwitcher/ArticleViewSwitche
 export { ArticleList } from './ui/ArticleList/ArticleList';
 export { getArticleDetailsData } from './model/selectors/getArticleDetails';
 export { ArticleDetails } from './ui/ArticleDetails/ui/ArticleDetails';
+export type { Article } from './model/types/article';
 export {
-  Article,
   ArticleSortField,
   ArticleView,
   ArticleType
-} from './model/types/article';
+} from './model/consts/consts';
 export type { ArticleDetailsScheme } from './model/types/articleDetailsScheme';
